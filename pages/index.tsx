@@ -9,10 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Login() {
   return (
   
-      <AuthLayout title={"Welcome"} BtnText='Login'>
+      <AuthLayout title="Welcome" BtnText='Login' preHref="You don't have an account?" href="/register" hrefAction="Register">
         <TextInput label="Email" />
         <PasswordInput label="Password" />
-        <Text align='end'size={12} mt='-16px'>You don't have an account? <Link href={"/register"} className="text-blue-300">Register</Link></Text>
+    
       </AuthLayout>
   );
 }

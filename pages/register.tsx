@@ -1,13 +1,24 @@
-import { AuthLayout } from '@/components'
-import { PasswordInput, TextInput } from '@mantine/core'
-import React from 'react'
+import { AuthLayout } from '@/components';
+import { Box, FileInput, PasswordInput, TextInput } from '@mantine/core';
+import React, { useState } from 'react';
 
 export default function Register() {
+  const [file, setFile] = useState<File | null>(null);
+
+  function handleChange(selectedFile: File | null) {
+    setFile(selectedFile);
+  }
+
   return (
-    <AuthLayout  title={'Create an Account'} BtnText={'Sign Up'}  preHref={'Have an account?'} href={'/'} hrefAction={'Login'}>
-           <TextInput label="Email" />
-        <PasswordInput label="Password" />
-        <PasswordInput label="Confirm Password" />
+    <AuthLayout title={'Create an Account'} BtnText={'Sign Up'} preHref={'Have an account?'} href={'/'} hrefAction={'Login'}>
+        <Box maw={300} mah={300} className='rounded-full'>
+      <FileInput label="Avatar" onChange={handleChange} />
+      {file && <img src={URL.createObjectURL(file)} alt="Uploaded avatar" />}
+
+        </Box>
+      <TextInput label="Username" />
+      <TextInput label="Email" />
+      <PasswordInput label="Password" />
     </AuthLayout>
-  )
+  );
 }

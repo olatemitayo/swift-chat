@@ -1,2 +1,2 @@
 export * from './auth-layout'
-export * from './net-la'
+export * from './dropzone'

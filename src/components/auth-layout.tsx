@@ -40,6 +40,7 @@ export function AuthLayout({ children, title, BtnText, preHref, href, hrefAction
         w={500}
         className="auth-shadows border border-blue-300 cmd:p-1 p-4"
       >
+        <form action="" className="w-full">
         <Flex
           w="100%"
           h="max-content"
@@ -60,6 +61,8 @@ export function AuthLayout({ children, title, BtnText, preHref, href, hrefAction
             </Flex>
           </Flex>
         </Flex>
+
+        </form>
       </Flex>
     </Flex>
   );

@@ -1,8 +1,7 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import { AuthLayout } from "@/components";
-import { Button, Flex, PasswordInput, Text, TextInput } from "@mantine/core";
-import Link from "next/link";
+import {PasswordInput, TextInput } from "@mantine/core";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

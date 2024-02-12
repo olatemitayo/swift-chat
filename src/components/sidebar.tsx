@@ -1,6 +1,6 @@
 import { Avatar, Button, Flex, Text } from "@mantine/core";
 import React from "react";
-import { SearchInput } from ".";
+import { ChatsList, SearchInput } from ".";
 
 export function Sidebar() {
   return (
@@ -19,6 +19,7 @@ export function Sidebar() {
         <Avatar size={24} />
       </Flex>
       <SearchInput />
+      <ChatsList />
     </Flex>
   );
 }

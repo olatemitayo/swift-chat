@@ -12,7 +12,8 @@ export default function Register() {
   return (
     <AuthLayout title={'Create an Account'} BtnText={'Sign Up'} preHref={'Have an account?'} href={'/'} hrefAction={'Login'}>
         <Box maw={300} mah={300} className='rounded-full'>
-      <FileInput label="Avatar" onChange={handleChange} />
+      
+      <FileInput  id="avatar" name="avatar" label="Upload Avatar" onChange={handleChange} />
       {file && <img src={URL.createObjectURL(file)} alt="Uploaded avatar" />}
 
         </Box>
